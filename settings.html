@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Settings</h1>
+        <label for="speed">Select Snake Speed:</label>
+        <select id="speed">
+            <option value="150">Very Slow</option>
+            <option value="100">Slow</option>
+            <option value="75">Medium</option>
+            <option value="50">Fast</option>
+            <option value="25">Very Fast</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <script>
+        function startGame() {
+            const speed = document.getElementById('speed').value;
+            localStorage.setItem('snakeSpeed', speed);
+            location.href = 'game.html';
+        }
+    </script>
+</body>
+</html>
